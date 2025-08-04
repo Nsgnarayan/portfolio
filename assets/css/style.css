@@ -159,9 +159,12 @@ ol {
 }
 /* header style */
 .site-header {
+  background-color: rgba(255, 255, 255, 0.3);
   padding: 10px 0;
   position: fixed;
   width: 100%;
+  z-index: 999;
+  backdrop-filter: blur(5px);
 }
 .site-branding a {
   color: var(--primary-color);
@@ -254,6 +257,66 @@ ol {
     width: 100%;
   }
 }
+
+
+
+
+
+/* project-section-css */
+.project-card .card-img img{
+  aspect-ratio: 1.5;
+  object-fit: cover;
+  object-position: center center;
+  transition: var(--transition);
+}
+.project-card .card-img{
+  overflow: hidden;
+}
+.project-card{
+  background-color: rgba(57, 56, 56, 0.4);
+  padding: 30px;
+  border: none;
+}
+.card-body{
+  padding: 0;
+}
+.tech-stack .badge{
+  background-color: var(--primary-color);
+  border-radius: 20px;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project-card .card-body p{
+  color: var(--white-color);
+}
+.tech-stack{
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.card-footer{
+  background-color: transparent;
+  border: none;
+  padding: 20px 0 0 0;
+  display: flex;
+  gap: 10px;
+}
+.live a, .code a, .live i, .code i{
+  color: var(--white-color);
+  transition: var(--transition);
+}
+.live:hover a, .code:hover a, .live:hover i, .code:hover i{
+  color: var(--primary-color);
+}
+.project-card:hover img{
+  transform: scale(1.1);
+}
+
+
+
+
 
 
 
