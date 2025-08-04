@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container{
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+:root {
+  --primary-color: orangered;
+  --hover-primary-color:#d65628;
+  --body-color: #bbb;
+  --bg-color: #252525;
+  --white-color: #fff;
+  --black-color: #000;
+  --gray-color: #d9d9d9;
+  --primary-font: "Oswald", sans-serif;
+  --body-font-size: 16px;
+  --line-height: 1.3;
+  --btn-font-size: 14px;
+  --border-radius: 16px;
+  --transition: all 0.3s ease-in-out;
+  --fs-display-1: clamp(32px, 4vw, 70px);
+  --fs-display-2: clamp(24px, 4vw, 40px);
+  --fs-display-3: clamp(22px, 4vw, 28px);
+  --fs-display-4: clamp(20px, 4vw, 24px);
+  --fs-display-5: clamp(18px, 5vw, 22px);
+  --fs-display-6: clamp(16px, 4vw, 18px);
+  --fs-display-7: clamp(10px, 4vw, 15px);
+}
+body {
+  font-family: var(--primary-font);
+  font-size: var(--body-font-size);
+  color: var(--body-color);
+  line-height: var(--line-height);
+  background-color: var(--bg-color);
+  font-weight: 400;
+  cursor: none;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  color: var(--primary-color);
+  font-family: var(--primary-font);
+  font-weight: 500;
+  line-height: var(--line-height);
+}
+h1,
+.h1 {
+  font-size: var(--fs-display-1);
+}
+h2,
+.h2 {
+  font-size: var(--fs-display-2);
+}
+h3,
+.h3 {
+  font-size: var(--fs-display-3);
+}
+h4,
+.h4 {
+  font-size: var(--fs-display-4);
+}
+h5,
+.h5 {
+  font-size: var(--fs-display-5);
+}
+h6,
+.h6 {
+  font-size: var(--fs-display-6);
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: flex;
+}
+p {
+  font-size: var(--fs-display-7);
+  margin-bottom: 24px;
+  line-height: 24px;
+}
+a {
+  text-decoration: none;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+ul,
+ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.btn {
+  padding: 16px 24px;
+  font-weight: 600;
+  font-size: var(--fs-display-7);
+  line-height: var(--line-height);
+  border-radius: 6px;
+  border: none;
+  transition: var(--transition);
+}
+.btn:focus {
+  outline: none;
+}
+.btn-primary {
+  --bs-btn-color: var(--white-color);
+  --bs-btn-hover-color: var(--black-color);
+  --bs-btn-bg: var(--primary-color);
+  --bs-btn-hover-bg: var(--white-color);
+  --bs-btn-hover-border-color: var(--primary-hover-color);
+  --bs-btn-active-color: var(--black-color);
+  --bs-btn-active-bg: var(--primary-hover-color);
+  --bs-btn-active-border-color: var(--primary-hover-color);
+  --bs-btn-disabled-color: var(--black-color);
+  --bs-btn-disabled-bg: var(--primary-color);
+}
+::selection{
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+.block {
+  padding: 150px 0;
+}
+.star {
+  position: fixed;
+  width: 6px;
+  height: 6px;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(1);
+  animation: starFade 0.8s linear forwards;
+  background: radial-gradient(circle, white 40%, rgba(255, 255, 255, 0) 70%);
+  filter: drop-shadow(0 0 6px white);
+}
+
+@keyframes starFade {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+/* header style */
+.site-header {
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+}
+.site-branding a {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+.main-nav nav ul {
+  display: flex;
+  gap: 30px;
+}
+.main-nav nav ul li a {
+  color: var(--white-color);
+  padding: 10px 0;
+  display: block;
+  position: relative;
+}
+.main-nav nav ul li a.active,
+.main-nav nav ul li a:hover {
+  color: var(--primary-color);
+}
+.main-nav nav ul li a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 30%;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: var(--transition);
+}
+.main-nav nav ul li a.active:hover::after {
+  width: 100%;
+}  
+.main-nav nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: var(--transition);
+}
+.main-nav nav ul li a:hover::after {
+  width: 100%;
+}
+.menu-bar {
+  padding: 5px 10px;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border: none;
+  outline: none;
+  border-radius: 3px;
+}
+
+/* hero-section-start */
+
+.hero-content h1 {
+  display: inline-block;
+}
+.hero-content h1 span{
+  position: relative;
+  display: inline-block;
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--primary-color);
+  animation: display-text 16s linear infinite;
+  animation-delay: calc(-4s * var(--i));
+}
+@keyframes display-text {
+  25%,100% {
+    display: none;
+  }
+}
+.hero-content h1 span::before {
+  content: attr(data-text);
+  position: absolute;
+  width: 0;
+  border-right: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  white-space: nowrap;
+  overflow: hidden;
+  animation: fill-text 4s linear infinite;
+}
+@keyframes fill-text {
+  10%,100% {
+    width: 0;
+  }
+   10%,90% {
+    width: 100%;
+  }
+}
+
+
+
+
+/* responsive */
+@media (max-width: 1399.98px) {
+}
+@media (max-width: 1199.98px) {
+}
+@media (max-width: 991.98px) {
+}
+@media (max-width: 767.98px) {
+  .offcanvas {
+    --bs-offcanvas-width: 100%;
+    background-color: var(--primary-color);
+  }
+  .offcanvas-header h5 {
+    color: var(--white-color);
+  }
+  .offcanvas-header .btn-close {
+    padding: 5px 10px;
+    height: auto;
+    align-items: center;
+    border: 2px solid var(--white-color);
+    --bs-btn-close-opacity: 1;
+    --bs-btn-close-bg: unset;
+    --bs-btn-close-color: var(--white-color);
+  }
+  .offcanvas nav ul {
+    gap: 20px;
+    flex-direction: column;
+  }
+  .offcanvas nav ul li a::after,
+  .offcanvas nav ul li a.active::after {
+    position: unset;
+  }
+  .offcanvas nav ul li a.active,
+  .offcanvas nav ul li a:hover {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    border-radius: 3px;
+    padding-left: 10px;
+  }
+  .offcanvas nav ul li a {
+    color: var(--white-color);
+  }
+  .hero-content h1 span,
+  .hero-content h1 span::before {
+    letter-spacing: 2px;
+  }
+}
+@media (max-width: 575.98px) {
+}
+/* responsive */
