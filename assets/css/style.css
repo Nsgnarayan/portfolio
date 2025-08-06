@@ -136,6 +136,9 @@ ol {
 .block {
   padding: 150px 0;
 }
+.card{
+  height: 100%;
+}
 .star {
   position: fixed;
   width: 6px;
@@ -221,6 +224,7 @@ ol {
   border-radius: 3px;
 }
 
+
 /* hero-section-start */
 
 .hero-content h1 {
@@ -249,7 +253,7 @@ ol {
   overflow: hidden;
   animation: fill-text 4s linear infinite;
 }
-@keyframes fill-text {
+@keyframes fill-text{
   10%,100% {
     width: 0;
   }
@@ -312,6 +316,75 @@ ol {
 }
 .project-card:hover img{
   transform: scale(1.1);
+}
+
+
+
+/* skill-section-start */
+
+.skill-card .card-body{
+  padding: 0;
+}
+.skill-card{
+  background-color: rgba(57, 56, 56, 0.4);
+  border: none;
+  padding: 15px;
+}
+.skill-icon{
+  color: var(--primary-color);
+  font-size: 25px;
+}
+.skill-card .card-body h3{
+  color: var(--white-color);
+  font-size: 15px;
+  margin: 5px 0 0 0;
+}
+
+
+
+/* contact-css-start */
+
+.social-info li a{
+  color: var(--white-color);
+}
+.social-info li i{
+  transition: var(--transition);
+}
+.social-info li:hover a,.social-info li:hover i{
+  color: var(--primary-color);
+}
+.contact-form{
+  background-color: rgba(57, 56, 56, 0.4);
+  padding: 30px;
+  border-radius: 5px;
+}
+.form-control{
+  background-color: transparent;
+  color: var(--white-color);
+  border: 1.5px solid var(--primary-color);
+  padding: 10px 20px;
+}
+textarea{
+  height: 170px;
+  resize: none;
+}
+.form-control::placeholder{
+  color: #bbb;
+}
+.form-control:focus{
+  background-color: transparent;
+  color: var(--white-color);
+  box-shadow: none;
+  outline-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+
+
+/* footer-section */
+.copy-right{
+  background-color: rgba(57, 56, 56, 0.4);
+  border-radius: 10px;
 }
 
 

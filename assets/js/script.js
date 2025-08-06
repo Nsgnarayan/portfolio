@@ -20,4 +20,21 @@ addEventListener("DOMContentLoaded", (e) => {
     star.remove();
   }, 800);
 });
+
+document.querySelector("contact-form").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  Email.send({
+    SecureToken: "YOUR_SMTPJS_TOKEN", // Replace with your token
+    To: 'yourgmail@gmail.com',        // Replace with your Gmail
+    From: document.getElementById("email").value,
+    Subject: "New Contact Form Message",
+    Body: "Name: " + document.getElementById("name").value +
+          "<br>Email: " + document.getElementById("email").value +
+          "<br>Message: " + document.getElementById("message").value
+  }).then(
+    message => alert(message)
+  );
+});
+document.querySelector(".date").textContent = new Date().getFullYear();
 });
