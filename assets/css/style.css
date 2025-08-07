@@ -404,6 +404,7 @@ textarea{
 @media (max-width: 767.98px) {
   .offcanvas {
     --bs-offcanvas-width: 100%;
+    height: 100vh;
     background-color: var(--primary-color);
   }
   .offcanvas-header h5 {
